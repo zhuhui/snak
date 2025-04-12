@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1149004694090050"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 顶部广告 -->
+        <div class="max-w-2xl mx-auto mb-6">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1149004694090050"
+                 data-ad-slot="2239572952"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">贪吃蛇游戏</h1>
+            
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-xl font-semibold text-gray-700">
+                    得分: <span id="score" class="text-green-600">0</span>
+                </div>
+                <div class="space-x-4">
+                    <button id="startBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-200">
+                        开始游戏
+                    </button>
+                    <button id="restartBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-200" disabled>
+                        重新开始
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <canvas id="gameCanvas" class="border-2 border-gray-300 rounded-lg w-full" width="400" height="400"></canvas>
+                <div id="gameOver" class="hidden absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                    <div class="text-white text-2xl font-bold">游戏结束!</div>
+                </div>
+            </div>
+
+            <div class="mt-4 text-center text-gray-600">
+                <p>使用方向键或 WASD 控制蛇的移动</p>
+            </div>
+        </div>
+
+        <!-- 底部广告 -->
+        <div class="max-w-2xl mx-auto mt-6">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1149004694090050"
+                 data-ad-slot="3848291803"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- 游戏结束时的广告 -->
+        <div id="gameOverAd" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="relative bg-white rounded-lg p-4">
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:250px"
+                     data-ad-client="ca-pub-1149004694090050"
+                     data-ad-slot="2239572952"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <button onclick="this.parentElement.parentElement.classList.add('hidden')" 
+                        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+                    ✕
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/game.js"></script>
+</body>
+</html> 
